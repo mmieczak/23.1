@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title th:text="${title}">Title</title>
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="text">
+        <h2>Dodaj produkt</h2>
+    </div>
+
+    <form method="POST" action="/dodajProdukt" novalidate>
+        <div class="col-md-3 mb-3">
+            <label for="name">Nazwa produktu</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Nazwa produktu" required>
+            <div class="invalid-feedback">
+                Nazwa produktu
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="price">Cena</label>
+            <input type="text" class="form-control" name="price" id="price" placeholder="Cena" required>
+            <div class="invalid-feedback">
+                Cena produktu
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="category">Kategoria</label>
+            <select id="category" class="form-control" required name="category">
+                <option selected="selected" disabled="disabled" value="">Wybierz...</option>
+                <option>Artykuły spożywcze</option>
+                <option>Artykuły gospodarstwa domowego</option>
+                <option>Inne produkty</option>
+            </select>
+            <div class="invalid-feedback">
+                Proszę o podanie województwa
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Dodaj</button>
+    </form>
+
+</div>
+</body>
+</html>
+
+<!--
+Na stronie głównej (localhost:8080) wyświetlane są linki:
+wyświetl wszystkie produkty – prowadzi do strony gdzie jest lista wszystkich produktów
+wyświetl produkty z kategorii art. spożywcze – prowadzi do strony gdzie jest lista wszystkich produktów spożywczych
+analogicznie stwórz podstrony dla art. gosp. domowego i „inne”
+Na stronach z listami produktów, na dole, pod listą produktów wyświetlana jest suma ich cen
+Wykonaj zadanie przekazując odpowiednią kategorię w adresie strony. Np: localhost:8080/lista?kategoria=spozywcze wyświetla art. spożywcze, a localhost:8080/lista?kategoria=domowe wyświetla art. gosp. domowego.
+-->

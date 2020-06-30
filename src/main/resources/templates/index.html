@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Strong główna</title>
+</head>
+<body>
+<ul>
+    <li>
+        <a href="/lista?kategoria=wszystkie">Wyświetl wszystkie produkty</a>
+    </li>
+    <li>
+        <a href="/lista?kategoria=spozywcze">Art. spożywcze</a>
+    </li>
+    <li>
+        <a href="/lista?kategoria=artgospdomowego">Art. gospodarstwa domowego</a>
+    </li>
+    <li>
+        <a href="/lista?kategoria=inne">Art. pozostałe</a>
+    </li>
+    <li>
+        <a href="/dodaj">Dodaj produkt</a>
+    </li>
+</ul>
+</body>
+</html>
+
+<!--
+Na stronie głównej (localhost:8080) wyświetlane są linki:
+wyświetl wszystkie produkty – prowadzi do strony gdzie jest lista wszystkich produktów
+wyświetl produkty z kategorii art. spożywcze – prowadzi do strony gdzie jest lista wszystkich produktów spożywczych
+analogicznie stwórz podstrony dla art. gosp. domowego i „inne”
+Na stronach z listami produktów, na dole, pod listą produktów wyświetlana jest suma ich cen
+Wykonaj zadanie przekazując odpowiednią kategorię w adresie strony. Np: localhost:8080/lista?kategoria=spozywcze wyświetla art. spożywcze, a localhost:8080/lista?kategoria=domowe wyświetla art. gosp. domowego.
+-->
